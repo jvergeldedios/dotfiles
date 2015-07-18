@@ -96,13 +96,3 @@ fi
 
 echo "Done! Open a new terminal window to see your new shell."
 
-                                                                                      fi
-                                                                                    fi
-                                                                                  fi
-                                                                                fi
-                                                                              fi
-                                            fi
-                            done
-                fi
-          fi
-    fi
