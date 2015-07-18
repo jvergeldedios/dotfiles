@@ -8,10 +8,10 @@ RUBY_VERSION=2.2.1
 (cd $DIR && git submodule update --init --recursive)
 
 # install brew
-if [ $OS_NAME == 'Darwin' ]
+if [ $OS_NAME == "Darwin" ]
 then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
-elif [ $OS_NAME == 'Linux' ]
+elif [ $OS_NAME == "Linux" ]
 then
   sudo apt-get install build-essential curl git m4 ruby texinfo \
     libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
