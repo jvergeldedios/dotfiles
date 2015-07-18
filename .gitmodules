@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-jade"]
 	path = vim/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "oh-my-fish"]
+	path = oh-my-fish
+	url = https://github.com/oh-my-fish/oh-my-fish.git
