@@ -17,7 +17,7 @@ pathadd() {
 if [ $OS_NAME == "Darwin" ]
 then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
-  $BREW_PATH=/usr/local/bin
+  BREW_PATH=/usr/local/bin
   pathadd $BREW_PATH
 elif [ $OS_NAME == "Linux" ]
 then
@@ -83,8 +83,16 @@ then
   chsh -s `which fish` 
 fi
 
-# install oh-my-fish
+# link fish config
+if [[ ! -e $HOME/.config ]]
+then 
+  ln -s $DIR/config $HOME/.config
+fi
 
+if [[ ! -e $HOME/.oh-my-fish ]]
+then 
+  ln -s $DIR/oh-my-fish $HOME/.oh-my-fish
+fi
 
 # install rbenv
 # brew install rbenv
