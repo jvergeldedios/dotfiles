@@ -36,3 +36,6 @@ rbenv rehash
 
 # vim config and plugins
 ln -s $DIR/vimrc $HOME/.vimrc
+ln -s $DIR/vim $HOME/.vim
+
+
