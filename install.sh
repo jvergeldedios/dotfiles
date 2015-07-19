@@ -52,14 +52,14 @@ fi
 
 # install python
 
-if [[ ! `which python` == *$BREW_PATH* ]]
+if [[ ! which python == *$BREW_PATH* ]]
 then
   brew install python 
 fi
 
 # vim config and plugins
 
-if [[ ! `which vim` == *$BREW_PATH* ]]
+if [[ ! which vim == *$BREW_PATH* ]]
 then
   brew install vim
 fi
@@ -79,9 +79,15 @@ then
   mkdir $HOME/.vimbackup
 fi
 
-if [ ! brew ls --versions cmake | grep cmake ]
+if [ ! which cmake ]
 then
-  brew install cmake
+  if [ $OS_NAME == "Darwin" ]
+  then
+    brew install cmake
+  elif [ $OS_NAME == "Linux" ]
+  then
+    yes | sudo apt-get install cmake
+  fi 
 fi
 (cd $DIR/vim/bundle/YouCompleteMe && ./install.sh)
 
