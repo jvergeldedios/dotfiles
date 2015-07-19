@@ -52,10 +52,7 @@ fi
 
 # install python
 
-if [ $OS_NAME == "Darwin" ]
-then
-  brew install python 
-elif [ $OS_NAME == "Linux" ]
+if [ $OS_NAME == "Linux" ]
 then
   dpkg -s python-dev > /dev/null 2>&1
   if [ $? == 1 ]
