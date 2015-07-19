@@ -135,6 +135,10 @@ if [ $? != 0 ]
 then
   brew install rbenv
   brew install ruby-build
+  if [ $OS_NAME == "Linux" ]
+  then
+    sudo apt-get --yes --force-yes install libffi-dev
+  fi 
 fi
 
 # install ruby
