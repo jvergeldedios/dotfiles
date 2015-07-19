@@ -29,7 +29,7 @@ then
     if [ $? == 1 ]
     then
       echo "Installing homebrew dependency $package"
-      sudo apt-get install $package > /dev/null 2>&1
+      yes | sudo apt-get install $package > /dev/null 2>&1 
     fi
   done
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)";
@@ -79,6 +79,7 @@ then
   mkdir $HOME/.vimbackup
 fi
 
+brew install cmake
 (cd $DIR/vim/bundle/YouCompleteMe && ./install.sh)
 
 # install fish
