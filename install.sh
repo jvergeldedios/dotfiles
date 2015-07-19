@@ -2,7 +2,7 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 OS_NAME=`uname`
-RUBY_VERSION=2.2.1
+RUBY_VERSION=2.2.2
 
 pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
