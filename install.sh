@@ -29,7 +29,7 @@ then
     if [ $? == 1 ]
     then
       echo "Installing homebrew dependency $package"
-      yes | sudo apt-get install $package > /dev/null 2>&1 
+      sudo apt-get --yes --force-yes install $package > /dev/null 2>&1 
     fi
   done
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)";
@@ -60,7 +60,7 @@ then
   dpkg -s python-dev > /dev/null 2>&1
   if [ $? == 1 ]
   then
-    yes | sudo apt-get install python-dev > /dev/null 2>&1 
+    sudo apt-get --yes --force-yes install python-dev > /dev/null 2>&1 
   fi
 fi 
 
@@ -94,7 +94,7 @@ then
     brew install cmake
   elif [ $OS_NAME == "Linux" ]
   then
-    yes | sudo apt-get install cmake
+    sudo apt-get --yes --force-yes install cmake
   fi 
 fi
 (cd $DIR/vim/bundle/YouCompleteMe && ./install.sh)
