@@ -52,14 +52,14 @@ fi
 
 # install python
 
-if [[ ! which python == *$BREW_PATH* ]]
+if [[ ! `which python` == *$BREW_PATH* ]]
 then
   brew install python 
 fi
 
 # vim config and plugins
 
-if [[ ! which vim == *$BREW_PATH* ]]
+if [[ ! `which vim` == *$BREW_PATH* ]]
 then
   brew install vim
 fi
@@ -79,7 +79,8 @@ then
   mkdir $HOME/.vimbackup
 fi
 
-if [ ! which cmake ]
+which cmake > /dev/null 2>&1
+if [ $? != 0 ]
 then
   if [ $OS_NAME == "Darwin" ]
   then
