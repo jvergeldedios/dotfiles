@@ -130,7 +130,7 @@ fi
 fish -c "omf install"
 
 # install rbenv
-which fish > /dev/null 2>&1
+which rbenv > /dev/null 2>&1
 if [ $? != 0 ]
 then
   brew install rbenv
