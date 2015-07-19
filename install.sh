@@ -50,7 +50,20 @@ then
   exit 1
 fi
 
+# install python
+
+if [[ ! `which python` == *$BREW_PATH* ]]
+then
+  brew install python 
+fi
+
 # vim config and plugins
+
+if [[ ! `which vim` == *$BREW_PATH* ]]
+then
+  brew install vim
+fi
+
 if [[ ! -e $HOME/.vimrc ]]
 then 
   ln -s $DIR/vimrc $HOME/.vimrc
@@ -65,6 +78,8 @@ if [[ ! -e $HOME/.vimbackup ]]
 then 
   mkdir $HOME/.vimbackup
 fi
+
+(cd $DIR/vim/bundle/YouCompleteMe && ./install.sh)
 
 # install fish
 which fish > /dev/null 2>&1
@@ -93,6 +108,8 @@ if [[ ! -e $HOME/.oh-my-fish ]]
 then 
   ln -s $DIR/oh-my-fish $HOME/.oh-my-fish
 fi
+
+fish -c "omf install"
 
 # install rbenv
 # brew install rbenv
