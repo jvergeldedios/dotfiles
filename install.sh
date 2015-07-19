@@ -130,12 +130,21 @@ fi
 fish -c "omf install"
 
 # install rbenv
-# brew install rbenv
-# brew install ruby-build
+which fish > /dev/null 2>&1
+if [ $? != 0 ]
+then
+  brew install rbenv
+  brew install ruby-build
+fi
 
 # install ruby
-# rbenv install $RUBY_VERSION
-# rbenv rehash
+if [[ ! `rbenv version` == *$RUBY_VERSION* ]]
+then
+  rbenv install $RUBY_VERSION
+  rbenv rehash
+  rbenv global $RUBY_VERSION
+  gem install bundler
+fi
 
 echo "Done! Open a new terminal window to see your new shell."
 
