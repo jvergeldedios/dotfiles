@@ -52,10 +52,13 @@ fi
 
 # install python
 
-if [[ ! `which python` == *$BREW_PATH* ]]
+if [ $OS_NAME == "Darwin" ]
 then
   brew install python 
-fi
+elif [ $OS_NAME == "Linux" ]
+then
+  yes | sudo apt-get install python-dev 
+fi 
 
 # vim config and plugins
 
