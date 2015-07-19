@@ -57,7 +57,11 @@ then
   brew install python 
 elif [ $OS_NAME == "Linux" ]
 then
-  yes | sudo apt-get install python-dev 
+  dpkg -s python-dev > /dev/null 2>&1
+  if [ $? == 1 ]
+  then
+    yes | sudo apt-get install python-dev > /dev/null 2>&1 
+  fi
 fi 
 
 # vim config and plugins
