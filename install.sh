@@ -79,7 +79,10 @@ then
   mkdir $HOME/.vimbackup
 fi
 
-brew install cmake
+if [ ! brew ls --versions cmake | grep cmake ]
+then
+  brew install cmake
+fi
 (cd $DIR/vim/bundle/YouCompleteMe && ./install.sh)
 
 # install fish
