@@ -13,6 +13,9 @@ set smartcase
 set smartindent
 set autoindent
 
+" CTRLP WORKING DIRECTORY MODE
+let g:ctrlp_working_path_mode = 0
+
 " KEY BINDINGS
 
 " Inserts newline with Enter key
