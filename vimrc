@@ -13,7 +13,7 @@ set smartcase
 set smartindent
 set autoindent
 
-set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
+set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
 let g:airline_powerline_fonts = 1
 
 " CTRLP WORKING DIRECTORY MODE
