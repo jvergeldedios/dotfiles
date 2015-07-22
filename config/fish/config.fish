@@ -16,3 +16,6 @@ Plugin "brew"
 
 # Path to your custom folder (default path is $FISH/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
+
+# Set default editor to vim
+set -x EDITOR vim
