@@ -16,6 +16,8 @@ set autoindent
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
 let g:airline_powerline_fonts = 1
 
+set shell=/bin/bash
+
 " CTRLP WORKING DIRECTORY MODE
 let g:ctrlp_working_path_mode = 0
 
