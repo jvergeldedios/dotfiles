@@ -3,7 +3,6 @@ syntax on
 filetype plugin indent on
 
 " MY STUFF
-
 set number
 set cursorline
 colorscheme railscasts 
@@ -12,14 +11,16 @@ set ignorecase
 set smartcase
 set smartindent
 set autoindent
+set laststatus=2
 
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
 let g:airline_powerline_fonts = 1
 
 set shell=/bin/bash
 
-" CTRLP WORKING DIRECTORY MODE
+" CTRLP settings
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dont_split = 'NERD'
 
 " KEY BINDINGS
 
