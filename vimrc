@@ -2,25 +2,28 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" MY STUFF
+" BASE SETTINGS
+colorscheme railscasts
 set number
 set cursorline
-colorscheme railscasts 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set ignorecase
 set smartcase
 set smartindent
 set autoindent
 set laststatus=2
+set shell=/bin/bash
 
+" AIRLINE SETTINGS
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
 let g:airline_powerline_fonts = 1
-
-set shell=/bin/bash
 
 " CTRLP settings
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dont_split = 'NERD'
+
+" COMMANDS
+command Sws StripWhitespace
 
 " KEY BINDINGS
 
