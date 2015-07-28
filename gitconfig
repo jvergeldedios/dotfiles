@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[core]
+[user]
+	name = Julian Vergel de Dios
+	email = julian.vergeldedios@gmail.com
+[push]
+	default = simple
