@@ -27,4 +27,4 @@ alias gpll "git pull"
 alias gb "git branch"
 alias gm "git merge"
 alias gs "git status"
-
+alias gf "git fetch"
