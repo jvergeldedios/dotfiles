@@ -11,8 +11,11 @@ Theme "robbyrussell"
 Plugin "rbenv"
 Plugin "brew"
 
-# Set default editor to vim
-set -x EDITOR vim
+# Set default editor to neovim
+set -x EDITOR nvim
+
+# Set nvim truecolor var
+set -x NVIM_TUI_ENABLE_TRUE_COLOR 1
 
 # git aliases
 alias gco "git checkout"
