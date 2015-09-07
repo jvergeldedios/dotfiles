@@ -31,3 +31,9 @@ alias gb "git branch"
 alias gm "git merge"
 alias gs "git status"
 alias gf "git fetch"
+
+# pygmentize
+alias ccat "pygmentize -g"
+
+# use nvim
+alias vim "nvim"

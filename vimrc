@@ -13,6 +13,7 @@ set smartindent
 set autoindent
 set laststatus=2
 set shell=/bin/bash
+set clipboard=unnamed
 
 " AIRLINE SETTINGS
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
@@ -37,6 +38,18 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Open CtrlP
 nmap <C-p> :CtrlPRoot<CR>
+
+" EasyMotion bindings
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 " Move swapfiles
 set directory=~/.vimbackup
