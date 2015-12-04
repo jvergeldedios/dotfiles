@@ -14,6 +14,7 @@ set autoindent
 set laststatus=2
 set shell=/bin/bash
 set clipboard=unnamed
+set colorcolumn=80
 
 " AIRLINE SETTINGS
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
