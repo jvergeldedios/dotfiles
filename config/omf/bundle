@@ -1,0 +1,4 @@
+package brew
+package rbenv
+theme default
+theme robbyrussell
