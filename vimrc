@@ -18,6 +18,9 @@ set shell=/bin/bash
 set clipboard=unnamed
 set colorcolumn=80
 
+" PYTHON SETTINGS
+let g:python_host_prog = '~/.pyenv/shims/python'
+
 " AIRLINE SETTINGS
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
 let g:airline_powerline_fonts = 1
@@ -25,6 +28,7 @@ let g:airline_powerline_fonts = 1
 " CTRLP settings
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dont_split = 'NERD'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " COMMANDS
 command Sws StripWhitespace
