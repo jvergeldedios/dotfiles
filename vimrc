@@ -19,7 +19,8 @@ set clipboard=unnamed
 set colorcolumn=80
 
 " PYTHON SETTINGS
-let g:python_host_prog = '~/.pyenv/shims/python'
+let g:python_host_prog = $PYENV_ROOT . '/versions/neovim2/bin/python'
+let g:python3_host_prog = $PYENV_ROOT . '/versions/neovim3/bin/python'
 
 " AIRLINE SETTINGS
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
