@@ -1,8 +1,7 @@
 # Path to Oh My Fish install.
 set -gx OMF_PATH /Users/julian/.local/share/omf
 
-# Customize Oh My Fish configuration path.
-#set -gx OMF_CONFIG /Users/julian/.config/omf
+set -gx EDITOR vim
 
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
@@ -55,28 +54,21 @@ function fish_title
   end
 end
 
-setenv PATH '/Users/julian/.pyenv/shims' $PATH
-setenv PYENV_SHELL fish
-. '/usr/local/Cellar/pyenv/20160726/libexec/../completions/pyenv.fish'
-command pyenv rehash 2>/dev/null
-function pyenv
-  set command $argv[1]
-  set -e argv[1]
-
-  switch "$command"
-  case rehash shell
-    . (pyenv "sh-$command" $argv|psub)
-  case '*'
-    command pyenv "$command" $argv
-  end
-end
-
+# Editor aliases
 alias vim nvim
+alias v vim
 
-set -gx EDITOR vim
-
-set -gx GOPATH $HOME/.go
-set -gx PATH $GOPATH/bin $PATH
+# Git aliases
+alias ga        "git add"
+alias gaa       "git add . --all"
+alias gb        "git branch"
+alias gc        "git commit -m"
+alias gco       "git checkout"
+alias gcl       "git clone"
+alias gd        "git diff"
+alias gs        "git status"
+alias gstash    "git stash"
+alias gsp       "git stash pop"
 
 status --is-interactive; and . (rbenv init -|psub)
 
