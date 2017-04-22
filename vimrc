@@ -25,6 +25,12 @@ let g:python3_host_prog = $PYENV_ROOT . '/versions/neovim3/bin/python'
 " AIRLINE SETTINGS
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
 let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
 
 " CTRLP settings
 let g:ctrlp_working_path_mode = 0

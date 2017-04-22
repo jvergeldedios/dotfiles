@@ -1,7 +1,11 @@
-# Path to Oh My Fish install.
-set -gx OMF_PATH /Users/julian/.local/share/omf
+set -gx FISH_CONFIG $HOME/.config/fish/config.fish
 
-set -gx EDITOR vim
+# Path to Oh My Fish install.
+set -gx OMF_PATH $HOME/.local/share/omf
+
+set -gx EDITOR nvim
+set -gx PYENV_ROOT $HOME/.pyenv
+set -gx PROJECTS $HOME/Projects
 
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
@@ -45,7 +49,6 @@ function test_identities
   end
 end
 
-
 function fish_title
   if [ $_ = 'fish' ]
     echo (prompt_pwd)
@@ -53,6 +56,17 @@ function fish_title
     echo $_
   end
 end
+
+function goto
+  cd $PROJECTS/$argv
+end
+
+function refish
+  source $FISH_CONFIG
+end
+
+# Utility aliases
+alias c clear
 
 # Editor aliases
 alias vim nvim
@@ -73,5 +87,7 @@ alias gstash    "git stash"
 alias gsp       "git stash pop"
 
 status --is-interactive; and . (rbenv init -|psub)
+status --is-interactive; and . (pyenv init -|psub)
+status --is-interactive; and . (pyenv virtualenv-init -|psub)
 
 start_agent
