@@ -84,3 +84,4 @@ augroup markdown
   au!
   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
+let g:airline#extensions#tmuxline#enabled = 0
