@@ -90,4 +90,7 @@ status --is-interactive; and . (rbenv init -|psub)
 status --is-interactive; and . (pyenv init -|psub)
 status --is-interactive; and . (pyenv virtualenv-init -|psub)
 
+set -gx GOPATH $HOME/.go
+set -gx PATH $GOPATH/bin $PATH
+
 start_agent
