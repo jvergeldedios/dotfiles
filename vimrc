@@ -35,7 +35,7 @@ let g:airline#extensions#tabline#show_buffers = 0
 " CTRLP settings
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dont_split = 'NERD'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp'
 
 " COMMANDS
 command Sws StripWhitespace
@@ -67,6 +67,17 @@ map  N <Plug>(easymotion-prev)
 
 " Move swapfiles
 set directory=~/.vimbackup
+
+" ULTISNIPS 
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Highlight github markdown automatically
 augroup markdown
